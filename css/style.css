@@ -1,0 +1,168 @@
+body {
+    margin: 0;
+    background: #9eb4d1
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    background-color: #859cc6;
+}
+
+header img {
+    display: block;
+    height: 230px;
+}
+
+.title {
+    padding-top: 3vh;
+    color: #2d3b4c;
+    font-size: 6vw;
+}
+
+.content {
+    display: flex;
+}
+
+nav {
+    flex: 0 0 160px;
+    background: #e5bdc9cc;
+    align-self: flex-start;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    display: block;
+    padding: 14px 18px;
+    color: #fff;
+    text-decoration: none;
+}
+
+li {
+    border-bottom: 1px solid #fff;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+section {
+    background: #fff;
+    padding: 24px;
+    width: 100%;
+}
+
+article h2 {
+    color: #9eb4d1;
+    font-size: 28px;
+}
+
+.desktop-img {
+    float: right;
+    width: 270px;
+}
+
+.mobile-img {
+    display: none;
+}
+
+footer {
+    background: #859cc6;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Table view */
+@media (max-width: 900px) and (min-width: 400px) {
+    .content {
+        flex-direction: column;
+    }
+
+    header img {
+        height: 150px;
+        width: 200px;
+    }
+
+    nav {
+        flex: 0 0 auto;
+        width: 100%;
+        background: transparent;
+    }
+
+    ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    li {
+        border: none;
+        margin: 0 8px;
+    }
+
+    a {
+        background: #e5bdc9;
+    }
+}
+
+/* Mobile view */
+@media (max-width: 600px) {
+    header {
+        background: linear-gradient(rgba(143, 167, 211, 0.6), rgba(179, 201, 240, 0.6)),
+            url('../images/lighthouselogo.jpg') center/cover no-repeat;
+        background-position: calc(100% + 200px) center;
+    }
+
+    header img {
+        display: none;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    nav {
+        width: 100%;
+        background: #9eb4d1;
+    }
+
+    nav ul {
+        display: block;
+    }
+
+    nav li {
+        border-bottom: 1px solid #fff;
+    }
+
+    nav a {
+        background: none;
+    }
+
+    .desktop-img {
+        display: none;
+    }
+
+    .mobile-img {
+        display: block;
+        float: none;
+        width: 100%;
+        margin: 0 0 16px 0;
+    }
+
+    .title {
+        margin-left: 5%;
+        font-size: 10vw;
+        color: darkblue;
+    }
+
+    section {
+        width: 85%;
+    }
+}
